@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style> 
+    body {
+        background-image: url("bg login.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 80px;
+    }
+    .header{
+        padding: 10px;
+        text-align: center;
+        align-content: center;
+    }
+    .center {
+        margin-left: 170px;
+        width: 50%;
+    }
+    .form{
+        margin: auto;
+        background-color:rgb(172, 159, 138);
+        border-radius: 20px;
+        max-width: 800px;
+        width: 250%;
+        padding: 10px;
+    }
+</style>
+<title>Pendaftaran UKM Bola Voli</title>
+
+
+<div class="header">
+<h1>Bergabunglah ke keluarga besar kami, UKM Bola Voli!!</h1>
+</div>
+<!-- *header heading -->
+<div class="form">
+<form action="/action_page.php">
+<div class="center">
+<p style="text-align: center; font-size: 24px; margin-left: 70px;"><b>FORM PENDAFTARAN</b></p>
+<table>
+    <tr>
+        <td>
+            <label for="nama">Nama Lengkap</label>
+        </td>
+        <td>
+            <input type="text" id="nama" name="nama" value="" style="width: 150%;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="nim">NIM</label>
+        </td>
+        <td>
+            <input type="text" id="nim" name="nim" value="" style="width: 150%;">
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <label for="jk">Jenis kelamin</label>
+        </td>
+        <td>
+            <input type="radio" id="l" name="fav_language" value="l">
+            <label for="l">Laki-laki</label>
+       
+            <input type="radio" id="p" name="fav_language" value="p">
+            <label for="p">Perempuan</label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="ttl">Tanggal Lahir</label>
+        </td>
+        <td>
+            <input type="date" id="ttl" name="ttl" value="">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="prodi">Program studi</label>
+        </td>
+        <td>
+            <select id="prodi">
+                <option value="S1mnj">S1 Manajemen</option>
+                <option value="S1akn">S1 Akuntansi</option>
+                <option value="S1eksyar">S1 Ekonomi Syariah</option>
+                <option value="S1si">S1 Sistem Informasi</option>
+                <option value="S1if">S1 Informatika</option>
+                <option value="S1dkv">S1 Desain Komunikasi Visual</option>
+                <option value="D3akn">D3 Akuntansi</option>
+                <option value="D3bank">D3 Perbankan dan keuangan</option>
+              </select>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <label for="telp">No. Telepon</label>
+        </td>
+        <td>
+            <input type="text" id="telp" name="telp" value="" style="width: 150%;">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="email">Email</label>
+        </td>
+        <td>
+            <input type="email" id="email" name="email" value="" style="width: 150%;">
+        </td>
+        <!-- <td>
+            <p style="color:darkgray;">*Disarankan menggunakan email institusi</p>
+        </td> -->
+    </tr>
+    
+    <tr>
+        <td>
+            <label for="als">Alasan memilih kami</label>
+        </td>
+        <td>
+            <input type="text" id="pass" name="pass" value="" style="width: 150%; height: 100px;" placeholder="Berikan alasan anda maks. 100 kata">
+        </td>
+    </tr>
+
+</table>
+<br>
+</div>
+<!-- *.center  -->
+<script>
+    // Fungsi JavaScript untuk menampilkan pesan alert
+    function showAlert() {
+        alert("Form berhasil terdaftar, semoga dapat bergabung ke ormawa pilihan kamu yaa!!");
+    }
+</script>
+<div class="header">
+    <button type="button"><a style="font-weight: bold; font-size: 100%; text-decoration: none;" href="../PEMILIHAN ORMAWA/Utama.html" onclick="showAlert()">Daftar!</a></button>
+</div> 
+<!-- *.header sign up -->
+</div>
+<!-- *.form -->
+</form>
+</body>
+</html>

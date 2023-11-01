@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Master Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* Warna cream */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            color: #000000;
+        }
+
+        form input[type="text"],
+        form select,
+        form input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #ffaa00; /* Warna coklat */
+            color: #000000;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 500px;
+            margin-top:20px;
+            margin-bottom: 20px;
+            padding: 60px;
+            border: 1px solid #d2b48c;
+            border-radius: 5px;
+            background-color: #d2b48c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Form Data Master Mahasiswa</h1>
+    <form>
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" name="nim" required><br>
+
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="prodi">Program Studi:</label>
+        <select id="prodi" name="prodi">
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+            <option value="Akuntansi">Akuntansi</option>
+            <option value="Manajemen">Manajemen</option>
+        </select><br>
+
+        <label for="ukm">UKM:</label>
+        <input type="text" id="ukm" name="ukm"><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="Diterima">Diterima</option>
+            <option value="Ditolak">Ditolak</option>
+            <option value="Diproses">Diproses</option>
+        </select><br>
+
+        <input type="submit" value="Tambah">
+    </form>
+</div>
+</body>
+</html>

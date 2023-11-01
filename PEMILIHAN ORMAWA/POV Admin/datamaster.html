@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Master Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* Warna cream */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #d2b48c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #d2b48c;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        table th {
+            background-color: #d2b48c; /* Warna coklat */
+            color: #fff;
+        }
+
+        .add-button {
+            display: inline-block;
+            margin: 20 auto;
+            padding: 10px 20px;
+            background-color: #d2b48c; /* Warna coklat */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .add-button:hover {
+            background-color: #d2b48c;
+        }
+
+        .edit-button, .delete-button {
+            display: inline-block;
+            background-color: #d2b48c; /* Warna coklat atau cream */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .edit-button, .delete-button:hover {
+            background-color: #d2b48c; /* Warna coklat yang lebih gelap saat dihover */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <marquee behavior="scroll" direction="right">
+            <h1>Selamat Datang, Admin!</h1>
+        </marquee>
+    </header>
+    
+    <nav>
+        <a href="../POV Admin/HalAdmin.html">Beranda</a>
+        <a href="../POV Admin/datamaster.html">Data Master</a>
+        <a href="../POV Admin/laporan.html">Laporan</a>
+        <a href="loginadmin.html" class="button logout-button">Keluar</a>
+    </nav>
+    
+    <main>
+        <h2>Data Master Mahasiswa</h2>
+        <table border="1" id="data-table">
+            
+        <a class="add-button" href="mahasiswa.html">Tambah Data</a>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Program Studi</th>
+                <th>ORMAWA</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+            <tr>
+                <td>202102021006</td>
+                <td>Gadis Rossy Non Iklimah</td>
+                <td>Sistem Informasi</td>
+                <td>HIMA FTD</td>
+                <td>Diterima</td>
+                <td>
+                    <a class="edit-button" href="mahasiswa.html">Edit</a>
+                    <a class="delete-button" onclick="deleteRow(this)">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>202102021014</td>
+                <td>Noventy Ayuning Fitri</td>
+                <td>Sistem Informasi</td>
+                <td>HIMA FTD</td>
+                <td>Diterima</td>
+                <td>
+                    <a class="edit-button" href="mahasiswa.html">Edit</a>
+                    <a class="delete-button" onclick="deleteRow(this)">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>202102021013</td>
+                <td>Ganestiana Diah Maharani</td>
+                <td>Sistem Informasi</td>
+                <td>BEM</td>
+                <td>Ditolak</td>
+                <td>
+                    <a class="edit-button" href="mahasiswa.html">Edit</a>
+                    <a class="delete-button" onclick="deleteRow(this)">Delete</a>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            function deleteRow(button) {
+                if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+                    var row = button.parentNode.parentNode;
+                    var table = document.getElementById("data-table");
+                    table.deleteRow(row.rowIndex);
+                }
+            }
+        </script>
+
+    <script src="script.js"></script>
+
+        <h2>Data Master ORMAWA</h2>
+        <table border="1" id="data-tableormawa">
+            <a class="add-button" href="ormawa.html">Tambah Data</a>
+            <tr>
+                <th>Nama ORMAWA</th>
+                <th>Deskripsi</th>
+                <th>Jumlah Anggota</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+            <tr>
+                <td>HIMA FTD</td>
+                <td>Perhimpunan Mahasiswa Fakultas Teknik dan Desain</td>
+                <td>20</td>
+                <td>Aktif</td>
+                <td>
+                    <a class="edit-button" href="ormawa.html">Edit</a>
+                    <a class="delete-button" onclick="deleteRow(this)">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>HIMA Manajemen</td>
+                <td>Perhimpunan Mahasiswa Fakultas Manajemen</td>
+                <td>27</td>
+                <td>Aktif</td>
+                <td>
+                    <a class="edit-button" href="ormawa.html">Edit</a>
+                    <a class="delete-button" onclick="deleteRow(this)">Delete</a>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            function deleteRow(button) {
+                if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+                    var row = button.parentNode.parentNode;
+                    var table = document.getElementById("data-tableormawa");
+                    table.deleteRow(row.rowIndex);
+                }
+            }
+        </script>
+
+    <script src="script.js"></script>
+    </main>
+</body>
+</html>

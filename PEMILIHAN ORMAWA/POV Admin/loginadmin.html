@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style> 
+    body {
+        background-image: url(bglogin.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 100px;
+    }
+    .header{
+        padding: 10px;
+        text-align: center;
+        align-content: center;
+    }
+    .center {
+        margin-left: 200px;
+        width: 50%;
+        padding: 10px;
+    }
+    .form{
+        margin: auto;
+        background-color:rgb(172, 159, 138);
+        border-radius: 20px;
+        max-width: 700px;
+        width: 80%;
+        padding: 10px;
+    }
+    .tengah{
+        padding: 10px;
+        margin-left: 100px;
+    }
+</style>
+
+<title>Login Admin</title>
+
+<div class="form">
+<div class="header">
+<h1>Login Admin ORMAWA EXPO</h1>
+</div>
+
+<form action="/action_page.php">
+<div class="center">
+    <table>
+        <tr>
+            <td>
+                <label for="username">Username</label>
+            </td>
+            <td>
+                <input type="text" id="username" name="username" value="" style="width: 100%;" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Password</label>
+            </td>
+            <td>
+                <input type="password" id="password" name="password" value="" style="width: 100%;" required>
+            </td>
+        </tr>
+</table>
+<div class="tengah">
+    <button type="button"><a style="font-weight: bold; font-size: 95%; text-decoration: none;" href="../POV Admin/HalAdmin.html">Login</a></button>
+</div>
+</div>
+    <script>0
+        document.getElementById("center").addEventListener("submit", function(event) {
+            event.preventDefault(); // Menghentikan pengiriman formulir
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Anda harus menggantikan ini dengan kode otentikasi yang sesuai.
+            // Ini hanya contoh sederhana.
+            if (username === "admin" && password === "password") {
+                alert("Login berhasil!");
+                // Setelah login berhasil, Anda dapat mengarahkan pengguna ke halaman admin.
+            } else {
+                alert("Login gagal. Silakan coba lagi.");
+            }
+        });
+    </script>
+
+</body>
+</html>
